@@ -1,3 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  @font-face {
+    font-family: "Roboto-black";
+    src: url("../src/assets/fonts/Roboto-Black.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-Black.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-black-italic";
+    src: url("../src/assets/fonts/Roboto-BlackItalic.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-BlackItalic.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-bold";
+    src: url("../src/assets/fonts/Roboto-Bold.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-Bold.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-bold-italic";
+    src: url("../src/assets/fonts/Roboto-BoldItalic.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-BoldItalic.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-italic";
+    src: url("../src/assets/fonts/Roboto-Italic.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-Italic.ttf") format("woff");
+  }
+
+  
+  @font-face {
+    font-family: "Roboto-light";
+    src: url("../src/assets/fonts/Roboto-Light.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-Light.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-light-italic";
+    src: url("../src/assets/fonts/Roboto-LightItalic.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-LightItalic.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-medium";
+    src: url("../src/assets/fonts/Roboto-Medium.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-Medium.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-medium-italic";
+    src: url("../src/assets/fonts/Roboto-MediumItalic.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-MediumItalic.ttf") format("woff");
+  }
+
+
+  @font-face {
+    font-family: "Roboto-regular";
+    src: url("../src/assets/fonts/Roboto-Regular.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-Regular.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-thin";
+    src: url("../src/assets/fonts/Roboto-Thin.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-Thin.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-thin-italic";
+    src: url("../src/assets/fonts/Roboto-ThinItalic.ttf") format("tff"),
+      url("../src/assets/fonts/Roboto-ThinItalic.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-condensed-bold";
+    src: url("../src/assets/fonts/RobotoCondensed-Bold.ttf") format("tff"),
+      url("../src/assets/fonts/RobotoCondensed-Bold.ttf") format("woff");
+  }
+
+  
+  @font-face {
+    font-family: "Roboto-condensed-italic";
+    src: url("../src/assets/fonts/RobotoCondensed-Italic.ttf") format("tff"),
+      url("../src/assets/fonts/RobotoCondensed-Italic.ttf") format("woff");
+  }
+
+  
+  @font-face {
+    font-family: "Roboto-condensed-bold-italic";
+    src: url("../src/assets/fonts/RobotoCondensed-BoldItalic.ttf") format("tff"),
+      url("../src/assets/fonts/RobotoCondensed-BoldItalic.ttf") format("woff");
+  }
+
+
+  @font-face {
+    font-family: "Roboto-condensed-light";
+    src: url("../src/assets/fonts/RobotoCondensed-Light.ttf") format("tff"),
+      url("../src/assets/fonts/RobotoCondensed-Light.ttf") format("woff");
+  } 
+  
+
+  @font-face {
+    font-family: "Roboto-condensed-light-italic";
+    src: url("../src/assets/fonts/RobotoCondensed-LightItalic.ttf") format("tff"),
+      url("../src/assets/fonts/RobotoCondensed-LightItalic.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto-condensed-regular";
+    src: url("../src/assets/fonts/RobotoCondensed-Regular.ttf") format("tff"),
+      url("../src/assets/fonts/RobotoCondensed-Regular.ttf") format("woff");
+  }
+
+  @font-face {
+    font-family: "Subway-100";
+    src: url("../src/assets/fonts/Subway-100.ttf") format("tff"),
+      url("../src/assets/fonts/Subway-100.ttf") format("woff");
+  }
+
+}
+
+.roboto-black{
+  font-family: "Roboto-black";
+}
+
+.roboto-black-italic{
+  font-family: "Roboto-black-italic";
+}
+
+.roboto-bold-{
+  font-family: "Roboto-bold";
+}
+
+.roboto-bold-italic{
+  font-family: "Roboto-bold-italic";
+}
+
+.roboto-italic{
+  font-family: "Roboto-italic";
+}
+
+.roboto-light{
+  font-family: "Roboto-light";
+}
+
+.roboto-light-italic{
+  font-family: "Roboto-light-italic";
+}
+
+.roboto-medium{
+  font-family: "Roboto-medium";
+}
+
+.roboto-medium-italic{
+  font-family: "Roboto-medium-italic";
+}
+
+.roboto-regular{
+  font-family: "Roboto-regular";
+}
+
+.roboto-thin{
+  font-family: "Roboto-thin";
+}
+
+.roboto-thin-italic{
+  font-family: "Roboto-thin-italic";
+}
+
+.roboto-condensed-bold{
+  font-family: "Roboto-condensed-bold";
+}
+
+.roboto-condensed-italic{
+  font-family: "Roboto-condensed-italic";
+}
+
+.roboto-condensed-bold-italic{
+  font-family: "Roboto-condensed-bold-italic";
+}
+
+.roboto-condensed-light{
+  font-family: "Roboto-condensed-light";
+}
+
+.roboto-condensed-light-italic{
+  font-family: "Roboto-condensed-light-italic";
+}
+
+.roboto-condensed-regular{
+  font-family: "Roboto-condensed-regular";
+}
+
+.subway-100{
+  font-family: "Subway-100";
+}
+
+.bg-1{
+  background-image: url("../src/assets/images/bg-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100vh; */
+}
+
+.interact-bg{
+  background-image: url("../src/assets/images/interact.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

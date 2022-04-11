@@ -2,6 +2,9 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import buildingsMoon from '../../assets/images/buildings-moon.png'
 import interact from '../../assets/images/interact.png'
+import Survivors from '../../components/Survivors/Survivors'
+import tempRoadmap from '../../assets/images/tempRoadmap.png'
+import Faqs from '../../components/Faqs/Faqs'
 
 function Home() {
 
@@ -13,6 +16,8 @@ function Home() {
       </div>
     )
   }
+
+
   return (
     <div className='sectionsWrapper' >
       <div className="section-one bg-1">
@@ -22,9 +27,9 @@ function Home() {
         </div>
 
         <div className="title">
-          <h1 className=' subway-100 text-[#FFD500]' >SURVIVOR <span className='text-white ' >CITY</span></h1>
+          <h1 className=' subway-100 text-[#FFD500]' >survivor <span className='text-white ' >city</span></h1>
         </div>
-
+{/* interact start */}
         <div className="interact flex justify-between p-8 ">
           <div className="col-1 m-2 ">
             <Interact text={"intro"}/>
@@ -43,9 +48,26 @@ function Home() {
           <Interact text={"combat"}/>
           </div>
         </div>
+{/* interact end */}
+
+{/* survivors start */}
+
+<div className="survivors">
+  <Survivors text={"survivors"} />
+</div>
+
+<div className="roadmap">
+  <img src={tempRoadmap} alt="" />
+</div>
       </div>
 
-      <div className="section-two">
+{/* section 2  */}
+      <div className="section-two sec-2-bg">
+        {/* faq start */}
+        <div className="faqs">
+          <Faqs/>
+        </div>
+        {/* faq end */}
 
       </div>
       

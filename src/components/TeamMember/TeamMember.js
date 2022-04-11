@@ -2,7 +2,7 @@ import React from 'react'
 
 function TeamMember({image, name, position, details}) {
   return (
-    <div className='flex m-5  ' >
+    <div className='flex m-5 w-fit justify-center ' >
         <img src={image} className='w-16 h-16 object-contain ' alt="" />
 
         <div className="memberDetails ml-5 text-left text-[0.2em] max-w-[50%] ">

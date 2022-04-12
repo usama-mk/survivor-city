@@ -3,8 +3,10 @@ import footerBg from '../../assets/images/footer-bg.png'
 
 function Footer() {
   return (
-    <div className='container' >
-        <img src={footerBg} className='bg-repeat-x' alt="" />
+    <div className='' >
+        <div className="footer-bg h-16 sm:h-24 md:h-28 lg:h-48 ">
+            
+        </div>
 
     </div>
   )

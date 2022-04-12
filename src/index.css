@@ -221,6 +221,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.footer-bg{
+  background-image: url("../src/assets/images/footer-bg.png");
+  background-repeat:  repeat-x ;
+  background-size: contain;
+  width: 100%;
+  
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

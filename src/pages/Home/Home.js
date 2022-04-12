@@ -3,7 +3,9 @@ import Header from '../../components/Header/Header'
 import buildingsMoon from '../../assets/images/buildings-moon.png'
 import interact from '../../assets/images/interact.png'
 import Survivors from '../../components/Survivors/Survivors'
-import tempRoadmap from '../../assets/images/tempRoadmap.png'
+import roadmap from '../../assets/images/roadmap.png'
+import roadmapDot from '../../assets/images/roadmapDot.png'
+import upArrow from '../../assets/images/upArrow.png'
 import Faqs from '../../components/Faqs/Faqs'
 import Footer from '../../components/Footer/Footer'
 import TeamSection from '../../sections/TeamSection/TeamSection'
@@ -15,6 +17,14 @@ function Home() {
       <div className='container relative text-center text-white  ' >
           <img src={interact} className='w-20 ' alt="" />
           <h3 className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] subway-100 text-[8px] ' >{text}</h3>
+      </div>
+    )
+  }
+
+  const HoverElement=()=>{
+    return(
+      <div>
+        <img src={upArrow} className='w-5' alt="" />
       </div>
     )
   }
@@ -58,8 +68,15 @@ function Home() {
   <Survivors text={"survivors"} />
 </div>
 
-<div className="roadmap">
-  <img src={tempRoadmap} alt="" />
+<div className="roadmap relative">
+  <img src={roadmap} className='' alt="" />
+  <img src={roadmapDot} className='absolute top-[66%] left-[15%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3.5rem] 4xl:w-24 ' alt="" />
+  
+  <img src={roadmapDot} className='absolute top-[66%] left-[35%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24' alt="" />
+  <img src={roadmapDot} className='absolute top-[55%] left-[41%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24' alt="" />
+  <img src={roadmapDot} className='absolute top-[47%] left-[50%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24' alt="" />
+  <img src={roadmapDot} className='absolute top-[47%] left-[68%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24' alt="" />
+  <img src={roadmapDot} className='absolute top-[47%] left-[88%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24' alt="" />
 </div>
       </div>
 

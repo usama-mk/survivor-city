@@ -6,7 +6,7 @@ import discordLogo from '../../assets/images/discord.png'
 
 function Header() {
   return (
-    <div className='header flex justify-between' >
+    <div className='header flex justify-between p-5' >
         <div className="logo">
             <img src={logo} 
              alt=""

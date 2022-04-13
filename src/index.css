@@ -230,6 +230,14 @@
   
 }
 
+.hoverElement{
+  visibility: hidden ;
+}
+
+.dot-one:hover ~ .hoverElement { 
+  visibility: visible;  
+}
+
 /* .map-dot-desc {
   position: absolute;
   top: 0;

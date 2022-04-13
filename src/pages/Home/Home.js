@@ -21,10 +21,15 @@ function Home() {
     )
   }
 
-  const HoverElement=()=>{
+  const HoverElement=({text, imgTop, imgLeft, textTop, textLeft})=>{
     return(
-      <div>
-        <img src={upArrow} className='w-5' alt="" />
+      <div className='hoverElement ' >
+       <div className="flex justify-center">
+       <img src={upArrow} className={` w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3.5rem] 4xl:w-24 object-contain`} alt="" />
+       </div>
+        <p className={`  bg-[#FFD500] text-black p-5 rounded-2xl `} >
+            {text}
+        </p>
       </div>
     )
   }
@@ -70,13 +75,17 @@ function Home() {
 
 <div className="roadmap relative">
   <img src={roadmap} className='' alt="" />
-  <img src={roadmapDot} className='absolute top-[66%] left-[15%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3.5rem] 4xl:w-24 ' alt="" />
-  
-  <img src={roadmapDot} className='absolute top-[66%] left-[35%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24' alt="" />
-  <img src={roadmapDot} className='absolute top-[55%] left-[41%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24' alt="" />
-  <img src={roadmapDot} className='absolute top-[47%] left-[50%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24' alt="" />
-  <img src={roadmapDot} className='absolute top-[47%] left-[68%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24' alt="" />
-  <img src={roadmapDot} className='absolute top-[47%] left-[88%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24' alt="" />
+  <div className='absolute top-[66%] left-[15%]' >
+  <div className="flex justify-center dot-one">
+  <img src={roadmapDot} className='   w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3.5rem] 4xl:w-24 cursor-pointer ' alt="" />
+  </div>
+  <HoverElement text={"Hi there"} />
+  </div>
+  <img src={roadmapDot} className='absolute top-[66%] left-[35%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
+  <img src={roadmapDot} className='absolute top-[55%] left-[41%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
+  <img src={roadmapDot} className='absolute top-[47%] left-[50%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
+  <img src={roadmapDot} className='absolute top-[47%] left-[68%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
+  <img src={roadmapDot} className='absolute top-[47%] left-[88%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
 </div>
       </div>
 

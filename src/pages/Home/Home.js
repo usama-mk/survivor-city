@@ -23,11 +23,11 @@ function Home() {
 
   const HoverElement=({text, imgTop, imgLeft, textTop, textLeft})=>{
     return(
-      <div className='hoverElement ' >
+      <div className='hoverElement absolute top-[90%] hidden  ' >
        <div className="flex justify-center">
        <img src={upArrow} className={` w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3.5rem] 4xl:w-24 object-contain`} alt="" />
        </div>
-        <p className={`  bg-[#FFD500] text-black p-5 rounded-2xl `} >
+        <p className={` subway-100  bg-[#FFD500] text-black p-2 rounded-2xl text-[5px]  `} >
             {text}
         </p>
       </div>
@@ -75,13 +75,23 @@ function Home() {
 
 <div className="roadmap relative">
   <img src={roadmap} className='' alt="" />
-  <div className='absolute top-[66%] left-[15%]' >
-  <div className="flex justify-center dot-one">
-  <img src={roadmapDot} className='   w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3.5rem] 4xl:w-24 cursor-pointer ' alt="" />
+  <div className='absolute top-[66%] left-[25%]' >
+  <div className="flex flex-col items-center ">
+  <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer ' alt="" />
+  <HoverElement text={"minecraft competitions for and giveaways for whitelist spots. mint is in Q2 at 0.088 ETH per Survivor"} />
   </div>
-  <HoverElement text={"Hi there"} />
+ 
   </div>
-  <img src={roadmapDot} className='absolute top-[66%] left-[35%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
+  
+  {/* 2 */}
+  <div className='absolute top-[66%] left-[35%]' >
+  <div className="flex flex-col items-center ">
+  <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer ' alt="" />
+  <HoverElement text={"minecraft competitions for and giveaways for whitelist spots. mint is in Q2 at 0.088 ETH per Survivor"} />
+  </div>
+ 
+  </div>
+  {/* 2 end */}
   <img src={roadmapDot} className='absolute top-[55%] left-[41%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
   <img src={roadmapDot} className='absolute top-[47%] left-[50%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
   <img src={roadmapDot} className='absolute top-[47%] left-[68%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />

@@ -27,7 +27,7 @@ function Home() {
        <div className="flex justify-center">
        <img src={upArrow} className={` w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3.5rem] 4xl:w-24 object-contain`} alt="" />
        </div>
-        <p className={` subway-100  bg-[#FFD500] text-black p-2 rounded-2xl text-[5px]  `} >
+        <p className={` subway-100  bg-[#FFD500] text-black p-2 rounded-2xl text-[6px] w-28 sm:w-44 sm:text-[8px] md:w-48 md:text-[10px] lg:w-56 lg:text-[12px] 2xl:w-72 2xl:text-[14px] 4xl:w-96 4xl:text-[20px]  `} >
             {text}
         </p>
       </div>
@@ -87,15 +87,47 @@ function Home() {
   <div className='absolute top-[66%] left-[35%]' >
   <div className="flex flex-col items-center ">
   <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer ' alt="" />
-  <HoverElement text={"minecraft competitions for and giveaways for whitelist spots. mint is in Q2 at 0.088 ETH per Survivor"} />
+  <HoverElement text={" late Q2 / early Q3: token + staking will be released. biweekly auctions, only with our native token"} />
   </div>
- 
   </div>
   {/* 2 end */}
-  <img src={roadmapDot} className='absolute top-[55%] left-[41%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
-  <img src={roadmapDot} className='absolute top-[47%] left-[50%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
-  <img src={roadmapDot} className='absolute top-[47%] left-[68%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
-  <img src={roadmapDot} className='absolute top-[47%] left-[88%] w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer' alt="" />
+
+  {/* 3 */}
+  <div className='absolute top-[55%] left-[41%]' >
+  <div className="flex flex-col items-center ">
+  <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer ' alt="" />
+  <HoverElement text={"early Q3: NFT world competitions where participants get $WRLD Tokens while game finishes up development"} />
+  </div>
+  </div>
+  {/* 3 end */}
+
+   {/* 4 */}
+   <div className='absolute top-[47%] left-[50%]' >
+  <div className="flex flex-col items-center ">
+  <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer ' alt="" />
+  <HoverElement text={"mid Q3: sale of NFT upgrades and land plots with our native token (guns, swords, etc.), which will make your playable NFT earn more tokens in game"} />
+  </div>
+  </div>
+  {/* 4 end */}
+
+   {/* 5 */}
+   <div className='absolute top-[47%] left-[68%]' >
+  <div className="flex flex-col items-center ">
+  <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer ' alt="" />
+  <HoverElement text={"early Q4: launch of P2E game, with guidance into phase 2 of survivor city"} />
+  </div>
+  </div>
+  {/* 5 end */}
+
+     {/* 6 */}
+   <div className='absolute top-[47%] left-[80%]' >
+  <div className="flex flex-col items-center ">
+  <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 4xl:w-24 cursor-pointer ' alt="" />
+  <HoverElement text={" late Q2 / early Q3: token + staking will be released. biweekly auctions, only with our native token"} />
+  </div>
+  </div>
+  {/* 6 end */}
+ 
 </div>
       </div>
 

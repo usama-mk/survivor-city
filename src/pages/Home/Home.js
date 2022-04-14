@@ -14,15 +14,33 @@ import Modal from '../../components/Modal/Modal'
 
 function Home() {
   const [modal, setModal] = useState(false);
+  const [modalText, setModalText]= useState("")
+  const [modalHeading, setModalheading]= useState("")
 
-  const toggleModal = () => {
+  const toggleModal = (name) => {
+    if(name=="intro"){
+      setModalheading("intro")
+      setModalText("After nuclear warfare ravaged the metaverse, Vivor was left demolished and their population decimated. ­­Only 8888 people managed to carry on after the war. These brave souls proudly declared themselves the Survivors. Due to the nuclear fallout, some of the Survivors discovered they acquired special abilities. The nuclear war the Survivors lived through was hard and cruel. Surviving this trauma required many to do unthinkable things to survive. This broke 2888 of the Survivors who now follow a life of crime as they have lost their humanity. The rest swore to stop these criminals in order to help bring humanity back from the brink of destruction and they cling to the dream of once again living in peace and safety. After some time the city was renamed to Survivor City, and this is where our story takes place.")
+    }
+    else if(name=="overview"){
+      setModalheading("overview")
+      setModalText(`The gameplay consists of heroes vs villains and there are a lot of playable characters there. You can choose if you want to be a hero or a villain.There are 2 types of gamemodes, the PvE (where you can do missions and get "tokens") and the PvP where there will be events on an open world map with other players (we are gonna talk more about this soon).`)
+    }
+    else if(name=="gamemodes"){
+      setModalheading("gamemodes")
+      setModalText("After nuclear warfare ravaged the metaverse, Vivor was left demolished and their population decimated. ­­Only 8888 people managed to carry on after the war. These brave souls proudly declared themselves the Survivors. Due to the nuclear fallout, some of the Survivors discovered they acquired special abilities. The nuclear war the Survivors lived through was hard and cruel. Surviving this trauma required many to do unthinkable things to survive. This broke 2888 of the Survivors who now follow a life of crime as they have lost their humanity. The rest swore to stop these criminals in order to help bring humanity back from the brink of destruction and they cling to the dream of once again living in peace and safety. After some time the city was renamed to Survivor City, and this is where our story takes place.")
+    }
+    else if(name=="combat"){
+      setModalheading("combat")
+      setModalText("After nuclear warfare ravaged the metaverse, Vivor was left demolished and their population decimated. ­­Only 8888 people managed to carry on after the war. These brave souls proudly declared themselves the Survivors. Due to the nuclear fallout, some of the Survivors discovered they acquired special abilities. The nuclear war the Survivors lived through was hard and cruel. Surviving this trauma required many to do unthinkable things to survive. This broke 2888 of the Survivors who now follow a life of crime as they have lost their humanity. The rest swore to stop these criminals in order to help bring humanity back from the brink of destruction and they cling to the dream of once again living in peace and safety. After some time the city was renamed to Survivor City, and this is where our story takes place.")
+    }
     setModal(!modal);
   };
 
   const Interact=({text})=>{
     return(
       
-       <div className='container relative text-center text-white  ' onClick={toggleModal}  >
+       <div className='container relative text-center text-white  ' onClick={()=>toggleModal(text)}  >
         <img src={interact} className='w-20 ' alt="" />
         <h3 className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] subway-100 text-[8px] ' >{text}</h3>
     </div>
@@ -78,7 +96,7 @@ function Home() {
 {/* survivors start */}
 {
    modal &&
-   <Modal modal={modal} setModal={setModal} toggleModal={toggleModal} heading={"into"} text={"After nuclear warfare ravaged the metaverse, Vivor was left demolished and their population decimated. ­­Only 8888 people managed to carry on after the war. These brave souls proudly declared themselves the Survivors. Due to the nuclear fallout, some of the Survivors discovered they acquired special abilities. The nuclear war the Survivors lived through was hard and cruel. Surviving this trauma required many to do unthinkable things to survive. This broke 2888 of the Survivors who now follow a life of crime as they have lost their humanity. The rest swore to stop these criminals in order to help bring humanity back from the brink of destruction and they cling to the dream of once again living in peace and safety. After some time the city was renamed to Survivor City, and this is where our story takes place."} />
+   <Modal modal={modal} setModal={setModal} toggleModal={toggleModal} heading={modalHeading} text={modalText} />
 }
 
 <div className="survivors flex justify-center">

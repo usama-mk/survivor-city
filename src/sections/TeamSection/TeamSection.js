@@ -31,7 +31,7 @@ function TeamSection() {
         </div>
 
         <div className="r-3-c-2">
-        <TeamMember image={member5} name={"artin"} position={"marketer" } details={"I have over a year of experience in marketing and solidity developer. I have worked on many projects, one being HeadDAO and I have shown signs of great leadership in past work. I am happy to be on the team."} />
+        <TeamMember image={member5} name={"artin"} position={"Marketer" } details={"I have over a year of experience in marketing and solidity developer. I have worked on many projects, one being HeadDAO and I have shown signs of great leadership in past work. I am happy to be on the team."} />
         </div>
       </div>
      

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Header from '../../components/Header/Header'
-import buildingsMoon from '../../assets/images/buildings-moon.png'
+import buildings from '../../assets/images/buildings.png'
+import buildings4k from '../../assets/images/buildings-2x.png'
+import moon from '../../assets/images/moon.png'
 import interact from '../../assets/images/interact.png'
 import Survivors from '../../components/Survivors/Survivors'
 import roadmap from '../../assets/images/roadmap.png'
@@ -10,26 +12,36 @@ import Faqs from '../../components/Faqs/Faqs'
 import Footer from '../../components/Footer/Footer'
 import TeamSection from '../../sections/TeamSection/TeamSection'
 import Modal from '../../components/Modal/Modal'
+import { useMediaQuery } from 'react-responsive'
+
 
 function Home() {
   const [modal, setModal] = useState(false);
   const [modalText, setModalText]= useState("")
   const [modalHeading, setModalheading]= useState("")
 
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 1000px)'
+  })
+
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1000px)' })
+
+  const is4k = useMediaQuery({ query: '(min-width: 2236px)' })
+
   const toggleModal = (name) => {
-    if(name=="intro"){
+    if(name==="intro"){
       setModalheading("intro")
       setModalText("After nuclear warfare ravaged the metaverse, Vivor was left demolished and their population decimated. ­­Only 8888 people managed to carry on after the war. These brave souls proudly declared themselves the Survivors. Due to the nuclear fallout, some of the Survivors discovered they acquired special abilities. The nuclear war the Survivors lived through was hard and cruel. Surviving this trauma required many to do unthinkable things to survive. This broke 2888 of the Survivors who now follow a life of crime as they have lost their humanity. The rest swore to stop these criminals in order to help bring humanity back from the brink of destruction and they cling to the dream of once again living in peace and safety. After some time the city was renamed to Survivor City, and this is where our story takes place.")
     }
-    else if(name=="overview"){
+    else if(name==="overview"){
       setModalheading("overview")
       setModalText(`The gameplay consists of heroes vs villains and there are a lot of playable characters there. You can choose if you want to be a hero or a villain.There are 2 types of gamemodes, the PvE (where you can do missions and get "tokens") and the PvP where there will be events on an open world map with other players (we are gonna talk more about this soon).`)
     }
-    else if(name=="gamemodes"){
+    else if(name==="gamemodes"){
       setModalheading("gamemodes")
       setModalText("After nuclear warfare ravaged the metaverse, Vivor was left demolished and their population decimated. ­­Only 8888 people managed to carry on after the war. These brave souls proudly declared themselves the Survivors. Due to the nuclear fallout, some of the Survivors discovered they acquired special abilities. The nuclear war the Survivors lived through was hard and cruel. Surviving this trauma required many to do unthinkable things to survive. This broke 2888 of the Survivors who now follow a life of crime as they have lost their humanity. The rest swore to stop these criminals in order to help bring humanity back from the brink of destruction and they cling to the dream of once again living in peace and safety. After some time the city was renamed to Survivor City, and this is where our story takes place.")
     }
-    else if(name=="combat"){
+    else if(name==="combat"){
       setModalheading("combat")
       setModalText("After nuclear warfare ravaged the metaverse, Vivor was left demolished and their population decimated. ­­Only 8888 people managed to carry on after the war. These brave souls proudly declared themselves the Survivors. Due to the nuclear fallout, some of the Survivors discovered they acquired special abilities. The nuclear war the Survivors lived through was hard and cruel. Surviving this trauma required many to do unthinkable things to survive. This broke 2888 of the Survivors who now follow a life of crime as they have lost their humanity. The rest swore to stop these criminals in order to help bring humanity back from the brink of destruction and they cling to the dream of once again living in peace and safety. After some time the city was renamed to Survivor City, and this is where our story takes place.")
     }
@@ -40,8 +52,8 @@ function Home() {
     return(
       
        <div className='container relative text-center text-white cursor-pointer ' onClick={()=>toggleModal(text)}  >
-        <img src={interact} className='w-20 sm:w-28 md:w-32 lg:w-36 xl:w-40 3xl:w-48 4xl:w-56 ' alt="" />
-        <h3 className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] subway-100 text-[8px] sm:text-[12px] md:text-[16px] lg:text-[20px] xl:text-[22px] 3xl:text-[26px] 4xl:text-[32px] ' >{text}</h3>
+        <img src={interact} className='w-28 sm:w-32 md:w-44 lg:w-52 xl:w-60 3xl:w-72 4xl:w-96 ' alt="" />
+        <h3 className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] subway-100 text-[12px] sm:text-[18px] md:text-[22px] lg:text-[26px] xl:text-[30px] 3xl:text-[33px] 4xl:text-[46px] ' >{text}</h3>
     </div>
       
     )
@@ -65,8 +77,11 @@ function Home() {
     <div className='sectionsWrapper' >
       <div className="section-one bg-1">
         <Header/>
-        <div className="buildings-moon-wrapper flex justify-center">
-          <img src={buildingsMoon} className='object-contain p-5' alt="" />
+        <div className="buildings-moon-wrapper flex justify-center relative mt-10">
+         {
+           is4k? <img src={buildings4k} className='object-contain p-5 4xl:max-w-full 4xl:w-[125rem]  ' alt="" />: <img src={buildings} className='object-contain p-5 md:max-w-2xl xl:max-w-3xl 2xl:max-w-5xl 3xl:max-w-7xl 4xl:max-w-full ' alt="" />
+         }
+          <img src={moon} className='object-contain  pl-1 pr-1 absolute top-[-10%] 3xl:top-[-15%] 3xl:right-[40%] right-[35%] w-8 md:w-12 2xl:w-16 3xl:w-16 4xl:w-20 sm:w-12 ' alt="" />
         </div>
 
         <div className="title">
@@ -103,8 +118,13 @@ function Home() {
 </div>
 
 <div className="roadmap flex flex-col items-center relative">
+<p className={`font-bold bg-[#FFD500] text-black p-2 rounded-2xl text-[6px] w-28 sm:w-44 sm:text-[8px] md:w-48 md:text-[10px] lg:w-56 lg:text-[12px] 2xl:w-72 2xl:text-[14px] 4xl:w-96 4xl:text-[20px] absolute right-2 top-2 `} >
+            {
+              isTabletOrMobile?"Tap on the dots":"Hover over the dots"
+            }
+        </p>
   <img src={roadmap} className='' alt="" />
-  <div className='absolute top-[66%] left-[25%]' >
+  <div className='absolute top-[58%] lg:top-[56%] 3xl:top-[57%]  left-[25%]' >
   <div className="flex flex-col items-center ">
   <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 2xl:w-16 4xl:w-24 cursor-pointer ' alt="" />
   <HoverElement text={"Minecraft competitions for and giveaways for whitelist spots. Mint is in Q2 at 0.088 ETH per Survivor"} />
@@ -113,7 +133,7 @@ function Home() {
   </div>
   
   {/* 2 */}
-  <div className='absolute top-[66%] left-[35%]' >
+  <div className='absolute top-[58%] lg:top-[56%] 3xl:top-[57%] left-[35%]' >
   <div className="flex flex-col items-center ">
   <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 2xl:w-16 4xl:w-24 cursor-pointer ' alt="" />
   <HoverElement text={"Late Q2 / Early Q3: Token + staking will be released. biweekly auctions, only with our native token"} />
@@ -122,7 +142,7 @@ function Home() {
   {/* 2 end */}
 
   {/* 3 */}
-  <div className='absolute top-[55%] left-[41%]' >
+  <div className='absolute top-[45%] left-[40%] lg:left-[39%] xl:left-[40%] 2xl:left-[39%] 3xl:left-[40%] 4xl:left-[39%]  ' >
   <div className="flex flex-col items-center ">
   <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 2xl:w-16 4xl:w-24 cursor-pointer ' alt="" />
   <HoverElement text={"Early Q3: NFT World competitions where participants get $WRLD Tokens while game finishes up development"} />
@@ -131,7 +151,7 @@ function Home() {
   {/* 3 end */}
 
    {/* 4 */}
-   <div className='absolute top-[47%] left-[50%]' >
+   <div className='absolute top-[34%] lg:top-[33%] 4xl:top-[33%] left-[50%]' >
   <div className="flex flex-col items-center ">
   <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 2xl:w-16 4xl:w-24 cursor-pointer ' alt="" />
   <HoverElement text={"Mid Q3: Sale of NFT upgrades and land plots with our native token (guns, swords, etc.), which will make your playable NFT earn more tokens in game"} />
@@ -140,7 +160,7 @@ function Home() {
   {/* 4 end */}
 
    {/* 5 */}
-   <div className='absolute top-[47%] left-[68%]' >
+   <div className='absolute top-[34%] lg:top-[33%] 4xl:top-[33%] left-[68%]' >
   <div className="flex flex-col items-center ">
   <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 2xl:w-16 4xl:w-24 cursor-pointer ' alt="" />
   <HoverElement text={"Early Q4: Launch of P2E game, with guidance into phase 2 of survivor city"} />
@@ -149,7 +169,7 @@ function Home() {
   {/* 5 end */}
 
      {/* 6 */}
-   <div className='absolute top-[47%] left-[80%]' >
+   <div className='absolute top-[34%] lg:top-[33%]  4xl:top-[33%] left-[80%]' >
   <div className="flex flex-col items-center ">
   <img src={roadmapDot} className=' dot-one  w-3 sm:w-5 md:w-7 lg:w-12 xl:w-[3rem] 2xl:w-16 4xl:w-24 cursor-pointer ' alt="" />
   <HoverElement text={"??????"} />

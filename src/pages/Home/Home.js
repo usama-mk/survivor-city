@@ -9,7 +9,6 @@ import upArrow from '../../assets/images/upArrow.png'
 import Faqs from '../../components/Faqs/Faqs'
 import Footer from '../../components/Footer/Footer'
 import TeamSection from '../../sections/TeamSection/TeamSection'
-import Popup from 'reactjs-popup'
 import Modal from '../../components/Modal/Modal'
 
 function Home() {
@@ -40,9 +39,9 @@ function Home() {
   const Interact=({text})=>{
     return(
       
-       <div className='container relative text-center text-white  ' onClick={()=>toggleModal(text)}  >
-        <img src={interact} className='w-20 ' alt="" />
-        <h3 className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] subway-100 text-[8px] ' >{text}</h3>
+       <div className='container relative text-center text-white cursor-pointer ' onClick={()=>toggleModal(text)}  >
+        <img src={interact} className='w-20 sm:w-28 md:w-32 lg:w-36 xl:w-40 3xl:w-48 4xl:w-56 ' alt="" />
+        <h3 className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] subway-100 text-[8px] sm:text-[12px] md:text-[16px] lg:text-[20px] xl:text-[22px] 3xl:text-[26px] 4xl:text-[32px] ' >{text}</h3>
     </div>
       
     )
@@ -71,7 +70,7 @@ function Home() {
         </div>
 
         <div className="title">
-          <h1 className=' subway-100 text-[#FFD500]' >survivor <span className='text-white ' >city</span></h1>
+          <h1 className=' subway-100 text-[#FFD500] sm:text-[20px] md:text-[28px] lg:text-[45px] xl:text-[50px] 2xl:text-[55px] 3xl:text-[70px] 4xl:text-[90px] ' >survivor <span className='text-white ' >city</span></h1>
         </div>
 {/* interact start */}
         <div className="interact flex justify-between p-8 ">

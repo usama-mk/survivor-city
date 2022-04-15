@@ -40,9 +40,9 @@ function Faqs() {
 
   </div>
  {/* faq right end */}
-  <h3 className='absolute top-[40%] left-[50%] translate-x-[-70%] translate-y-[-50%] subway-100 text-[1rem] text-[#FFD500] ' >faq's</h3>
+  <h3 className='absolute top-[40%] left-[50%] translate-x-[-70%] translate-y-[-50%] subway-100  text-[#FFD500] text-[1rem] sm:text-[25px] nd:text-[34px] lg:text-[43px] xl:text-[52px] 2xl:text-[61px] 3xl:text-[70px] 4xl:text-[80px] ' >faq's</h3>
 
-  <h3 className='absolute top-[88%] left-[50%] translate-x-[-50%] translate-y-[-50%] subway-100 text-[0.5rem] text-white ' >meet the <span className='text-[#FFD500] ' >team</span> </h3>
+  <h3 className='absolute top-[88%] left-[50%] translate-x-[-50%] translate-y-[-50%] subway-100 text-[10px] sm:text-[18px] md:text-[22px] lg:text-[26px] xl:text-[28px] 2xl:text-[32px] 3xl:text-[40px] 4xl:text-[50px] text-white ' >meet the <span className='text-[#FFD500] ' >team</span> </h3>
 </div>
   )
 }

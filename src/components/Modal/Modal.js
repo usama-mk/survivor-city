@@ -30,7 +30,7 @@ export default function Modal({ modal, setModal, toggleModal, text, heading }) {
           </span>
 
           <div className="relative inline-block align-bottom  rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full md:min-w-[760px] md:max-w-[1000px]  2xl:max-w-[1200px]  3xl:max-w-[1300px]  4xl:max-w-[1900px] ">
-          <div className=" px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+            <div className=" px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
               <button
                 type="button"
                 className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm lg:text-lg xl:text-xl "
@@ -173,7 +173,6 @@ export default function Modal({ modal, setModal, toggleModal, text, heading }) {
                 )}
               </div>
             </div>
-            
           </div>
         </div>
       </div>
